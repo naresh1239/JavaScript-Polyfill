@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello world
+</body>
+   <script>
+    console.log("hello world");
+
+    const arr = ['hello', 'world', 'with', 'own', 'javascript'];
+
+    Array.prototype.CustomForEach = function(callbackfn){
+     console.log(this)
+     for (let i = 0; i < this.length; i++) {
+        callbackfn(this[i],i)
+     }
+    //  callbackfn()
+    }
+
+
+    arr.CustomForEach((item,i)=>{
+        console.log(item,i)
+    } )
+    </script>
+</html>

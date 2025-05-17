@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello world
+</body>
+   <script>
+    console.log("hello world");
+
+    const arr = ['hello', 'world', 'with', 'own', 'javascript'];
+    const aar = [1,2,3,4,5,6]
+
+    Array.prototype.CustomSome = function(callbackfn){
+
+     let newArr = false
+     for (let i = 0; i < this.length; i++) {
+        if(callbackfn(this[i],i)){
+            newArr = true
+            break
+        }
+     }
+    return newArr;
+    }
+
+
+   const newww =  aar.CustomSome((item,i)=>{
+       return item > 3
+    } )
+
+    console.log(newww)
+
+    </script>
+</html>

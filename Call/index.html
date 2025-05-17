@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello world
+</body>
+   <script>
+    console.log("hello world");
+
+  
+    const obj = {
+        name : 'vikas',
+        age : '87',
+        dob : '1578'
+    }
+
+    Function.prototype.CustomeCall = function(context, ...agu){
+      context.fu = this
+      context.fu(...agu)
+    }
+
+     function findme(prams){
+        const data = `my name is ${this.name} and age is ${this.age} and ${prams}`
+     console.log(data)
+     }
+
+     findme.CustomeCall(obj,'nothing')
+     console.log(obj)
+    </script>
+</html>

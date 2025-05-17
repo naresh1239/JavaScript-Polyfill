@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello world
+</body>
+   <script>
+    console.log("hello world");
+
+    const arr = ['hello', 'world', 'with', 'own', 'javascript'];
+
+    Array.prototype.CustomMap = function(callbackfn){
+     let newArr = []
+     for (let i = 0; i < this.length; i++) {
+        
+        newArr.push(callbackfn(this[i],i))
+     }
+     return newArr
+    //  callbackfn()
+    }
+
+
+   const newaa =  arr.CustomMap((item,i)=>{
+        return item + '1'
+    } )
+
+    console.log(newaa)
+    </script>
+</html>

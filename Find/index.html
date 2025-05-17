@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello world
+</body>
+   <script>
+    console.log("hello world");
+
+    const arr = ['hello', 'world', 'with', 'own', 'javascript'];
+    const aar = [1,2,3,4,5,6]
+
+    Array.prototype.CustomFind = function(callbackfn){
+
+     let newArr = undefined
+     for (let i = 0; i < this.length; i++) {
+        if(callbackfn(this[i],i)){
+            newArr = this[i]
+            break
+        }
+     }
+    return newArr;
+    }
+
+
+   const newww =  aar.CustomFind((item,i)=>{
+       return item > 13
+    } )
+
+    console.log(newww)
+
+    </script>
+</html>

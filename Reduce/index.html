@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello world
+</body>
+   <script>
+    console.log("hello world");
+
+  
+    const aar = [2,4,6]
+
+    Array.prototype.CustomReduce = function(callbackfn,initialVal){
+     let intial = initialVal;
+     for (let i = 0; i < this.length; i++) {
+       intial = callbackfn(intial, this[i])
+     }
+    return intial;
+    }
+
+
+   const newww =  aar.CustomReduce((accumultor,current)=>{
+       return accumultor + current
+    },0)
+
+    console.log(newww)
+
+    </script>
+</html>
