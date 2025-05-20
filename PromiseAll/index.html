@@ -1,0 +1,24 @@
+|<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    let myPromise = new Promise(function(Resolve, Reject) {
+    setTimeout(() => {
+        Reject( new error('ehlloo'))
+    }, 2000);
+   });
+
+
+   myPromise
+    .then((value) => console.log(value))  // This will handle the resolved value
+    .catch((error) => console.log(error));  // This will catch any error (rejection)
+</script>
+</html>
